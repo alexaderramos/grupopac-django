@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import handler404
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 from app.views import welcome, createClient, storeClient, about, contact, page_404
 
 handler404 = page_404
@@ -30,6 +33,6 @@ urlpatterns = [
 
     path('clientes/registrar/', createClient, name="clients.create"),
     path('clientes/guardar/', storeClient, name="clients.store")
-]
+] + static(settings.STATIC_ROOT, document_root=settings.STATIC_ROOT)
 
 

@@ -1,0 +1,27 @@
+{% extends 'layouts/app_2.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+    <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Registar clientes</h5>
+                    </div>
+                    <div class="card-body">
+                    {# Display django.contrib.messages as Bootstrap alerts #}
+                    {% bootstrap_messages %}
+                        <form action="{% url 'clients.store' %}" method="post" class="form">
+                            {% csrf_token %}
+                         {% bootstrap_form form %}
+                          {% buttons %}
+                            <button type="submit" class="btn btn-primary">
+                              Submit
+                            </button>
+                          {% endbuttons %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

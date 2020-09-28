@@ -1,0 +1,18 @@
+{% load static %}
+<header class="header_top_gap_four">
+    <nav class="navbar navbar-expand-lg" id="header">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{% static 'assets/img/home-one/logo.png' %}" alt="logo" /></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto menu">
+                   {% include 'layouts/partials/menus/items/menu-items.html' %}
+                </ul>
+            </div>
+            <ul class="list-unstyled navbar-nav navright">
+                <li>
+                    <a href="#" class="menu_btn"><i class="icon-bikini60s_menu"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

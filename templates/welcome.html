@@ -1,0 +1,266 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block page-title %}
+{% endblock %}
+
+{% block header %}
+ {% include 'layouts/partials/menus/menu-welcome.html' %}
+{% endblock %}
+
+{% block slider-area %}
+<!-- slider area -->
+<section class="main_slider_area">
+    <div class="slider-progress"><div class="slider_progress_bar"></div></div>
+    <div class="main_slider">
+        <div class="slider_item" style="background-image: url({% static 'assets/img/slider_1.jpg' %});">
+            <div class="overlay_bg"></div>
+            <div class="container">
+                <div class="slider_text">
+                    <h2 data-animation="fadeInUp" data-delay="0.1s">Quality solutions in construction</h2>
+                    <p data-animation="fadeInUp" data-delay="0.3s">Every detail is taken into account by our project engineers</p>
+                    <a href="#" class="theme_btn theme_btn_three hover_style1" data-animation="fadeInUp" data-delay="0.5s">See Portfolio</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider_item" style="background-image: url({% static 'assets/img/slider_2.jpg' %});">
+            <div class="overlay_bg"></div>
+            <div class="container">
+                <div class="slider_text">
+                    <h2 data-animation="fadeInUp" data-delay="0.1s">Quality solutions in construction</h2>
+                    <p data-animation="fadeInUp" data-delay="0.3s">Every detail is taken into account by our project engineers</p>
+                    <a href="#" class="theme_btn theme_btn_three hover_style1" data-animation="fadeInUp" data-delay="0.5s">See Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider_nav"><i class="fas fa-angle-left slider_left_arrow"></i> <i class="fas fa-angle-right slider_right_arrow"></i></div>
+</section>
+<!-- slider area -->
+{% endblock %}
+
+{% block content %}
+<!-- service area -->
+    <section class="cons_offer_service_area cons_offer_service_area_two cons_offer_service_area_four">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="offer_service_item pr_slider_item wow fadeInUp">
+                        <div class="hover-content">
+                            <i class="icon-metre icon"></i> <a href="#"> <h4>Planning</h4> </a> <a href="#" class="text_btn" data-text="See service">See service <i class="fas fa-angle-double-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="offer_service_item pr_slider_item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="hover-content">
+                            <i class="icon-oil-pump icon"></i> <a href="#"> <h4>Construction</h4> </a> <a href="#" class="text_btn" data-text="See service">See service <i class="fas fa-angle-double-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="offer_service_item pr_slider_item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="hover-content">
+                            <i class="icon-compass1 icon"></i> <a href="#"> <h4>Architecture</h4> </a> <a href="#" class="text_btn" data-text="See service">See service <i class="fas fa-angle-double-right"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service menu -->
+    <!-- cons_about_area -->
+    <section class="cons_about_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="cons_about_img">
+                        <img class="one" src="{% static 'assets/img/home-one/cons_about1.jpg' %}" alt="" /> <img class="two" src="{% static 'assets/img/home-one/cons_about2.png' %}" alt="" /> <img class="dot" src="{% static 'assets/img/home-one/dots.png' %}" alt="" />
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cons_about_content">
+                        <h6 class="title_top wow fadeInUp">a little about us</h6>
+                        <h2 class="title_head wow fadeInUp" data-wow-delay="0.2s">Management solutions experts</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.3s">With more than 5 projects per month, we can also make your project quickly and safely guaranteed.</p>
+                        <a href="#" class="text_btn wow fadeInUp" data-text="Know us More " data-wow-delay="0.3s">Know us More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cons_about_area -->
+    <!-- cons_features_area -->
+    <section class="cons_features_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="cons_about_content">
+                        <h6 class="title_top wow fadeInUp">Main features</h6>
+                        <h2 class="title_head wow fadeInUp" data-wow-delay="0.2s">Complete management of large projects</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.3s">Architecture, control and construction of projects of all kinds, we have the experts in each area of work</p>
+                        <ul class="list-unstyled">
+                            <li class="wow fadeInUp" data-wow-delay="0.1s">Teams with the best in technology</li>
+                            <li class="wow fadeInUp" data-wow-delay="0.2s">With more than 12 years of extensive experience</li>
+                            <li class="wow fadeInUp" data-wow-delay="0.3s">Most awarded architects in the world</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="features_img text-center"><img class="dot_middle" src="{% static 'assets/img/home-one/feature_dot.png' %}" alt="" /> <img src="{% static 'assets/img/home-one/feature_man.png' %}" alt="" /></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cons_features_area -->
+    <!-- cons_action_area -->
+    <section class="cons_action_area">
+        <div class="container">
+            <div class="cons_action_info">
+                <div class="text">Quality and reliability services to provide a solution to your project, we do it all and fast</div>
+                <div class="a_btn text-right"><a href="#" class="theme_btn theme_btn_white hover_style1">Download PDF</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- cons_action_area -->
+    <!-- cons_projects_area -->
+    <section class="cons_projects_area">
+        <div class="container">
+            <div class="section_title_one">
+                <h6 class="title_top wow fadeInUp" data-wow-delay="0.1s">projects</h6>
+                <h2 class="title_head wow fadeInUp" data-wow-delay="0.2s">Our projects</h2>
+            </div>
+            <div class="cons_project_info">
+                <div class="row cons_project_slider">
+                    <div class="col-lg-12">
+                        <div class="pr_slider_item">
+                            <img src="{% static 'assets/img/home-one/projects_img1.jpg' %}" alt="" />
+                            <div class="hover-content">
+                                <h6>architecture</h6>
+                                <h4>
+                                    Apartment building in the<br />
+                                    residential district
+                                </h4>
+                                <a href="#" class="text_btn" data-text="See project">See project <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="pr_slider_item">
+                            <img src="{% static 'assets/img/home-one/projects_img2.jpg' %}" alt="" />
+                            <div class="hover-content">
+                                <h6>architecture</h6>
+                                <h4>
+                                    Apartment building in the<br />
+                                    residential district
+                                </h4>
+                                <a href="#" class="text_btn" data-text="See project">See project <i class="fas fa-arrow-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom_arrow">
+                    <div class="prev custom_prev"><i class="fas fa-caret-left"></i></div>
+                    <div class="next custom_next"><i class="fas fa-caret-right"></i></div>
+                </div>
+            </div>
+            <div class="text-right"><a href="#" class="theme_btn_two hover_style1">See All</a></div>
+        </div>
+    </section>
+    <!-- cons_projects_area -->
+    <!-- cons_testimonial_area -->
+    <section class="cons_testimonial_area">
+        <div class="cons_custom_left"></div>
+        <div class="cons_custom_right">
+            <div class="cons_testimonial_slider" id="testimonial">
+                <div class="item">
+                    <div class="testimonial_content">
+                        <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                        <h3 class="testimonail_text">They built <strong>the location of our florist business</strong> we are excited to open.</h3>
+                        <div class="testimonail_author">
+                            <div class="img"><img src="{% static 'assets/img/home-one/author1.png' %}" alt="" /></div>
+                            Brianna Wills
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial_content">
+                        <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                        <h3 class="testimonail_text">They built <strong>the location of our florist business</strong> we are excited to open.</h3>
+                        <div class="testimonail_author">
+                            <div class="img"><img src="{% static 'assets/img/home-one/author1.png' %}" alt="" /></div>
+                            Brianna Wills
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial_content">
+                        <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
+                        <h3 class="testimonail_text">They built <strong>the location of our florist business</strong> we are excited to open.</h3>
+                        <div class="testimonail_author">
+                            <div class="img"><img src="{% static 'assets/img/home-one/author1.png' %}" alt="" /></div>
+                            Brianna Wills
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cons_testimonial_area -->
+    <!-- cons_team_area -->
+    <section class="cons_team_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5">
+                    <div class="cons_about_content">
+                        <h6 class="title_top wow fadeInUp" data-wow-delay="0.1s">our Team</h6>
+                        <h2 class="title_head wow fadeInUp" data-wow-delay="0.2s">Meet our team of professionals</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.3s">More and more professionals join us to work as a team and complement our skills in a big way.</p>
+                        <a href="#" class="text_btn wow fadeInUp" data-wow-delay="0.4s" data-text="Meet the team">Meet the team</a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="team_img_info">
+                        <img class="dot_middle" src="{% static 'assets/img/home-one/feature_dot.png' %}" alt="" />
+                        <div class="row">
+                            <div class="col-6 cons_team_col">
+                                <a href="#" class="cons_team_item" data-parallax='{"x": 0, "y": 50}'> <img src="{% static 'assets/img/home-one/team1.jpg' %}" alt="" /> </a>
+                            </div>
+                            <div class="col-6 cons_team_col">
+                                <a href="#" class="cons_team_item" data-parallax='{"x": 0, "y": -50}'> <img src="{% static 'assets/img/home-one/team2.jpg' %}" alt="" /> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- cons_team_area -->
+    <!-- cons_subscribe_area -->
+    <section class="cons_subscribe_area">
+        <div class="cons_subscribe_info parallaxie" style="background: url({% static 'assets/img/home-one/subscribe_bg.jpg' %}) no-repeat scroll center 0 / cover;">
+            <div class="overlay"></div>
+            <div class="cons_subscribe_content">
+                <div class="section_title_one text-center">
+                    <h2 class="title_head">Sign up to our Newsletter</h2>
+                    <p>Subscribe to our weekly newsletter so you don't miss out on tips and promotions for our services we offer.</p>
+                </div>
+                <form action="#" class="cons_subscribe_form"><input type="text" class="form-control" placeholder="Enter your email" /> <button type="submit" class="theme_btn hover_style1">Subscribe</button></form>
+            </div>
+        </div>
+    </section>
+    <!-- cons_subscribe_area -->
+    <!-- cons clients logo area -->
+    <section class="cons_clients_logo_area">
+        <div class="container">
+            <div class="clients_logo_inner">
+                <a href="#" class="clients_logo"> <img src="{% static 'assets/img/home-one/clients_log1.png' %}" alt="" /> <img src="{% static 'assets/img/home-one/clients_log_black1.png' %}" alt="" /> </a>
+                <a href="#" class="clients_logo"> <img src="{% static 'assets/img/home-one/clients_log2.png' %}" alt="" /> <img src="{% static 'assets/img/home-one/clients_log_black2.png' %}" alt="" /> </a>
+                <a href="#" class="clients_logo"> <img src="{% static 'assets/img/home-one/clients_log3.png' %}" alt="" /> <img src="{% static 'assets/img/home-one/clients_log_black3.png' %}" alt="" /> </a>
+                <a href="#" class="clients_logo"> <img src="{% static 'assets/img/home-one/clients_log4.png' %}" alt="" /> <img src="{% static 'assets/img/home-one/clients_log_black4.png' %}" alt="" /> </a>
+                <a href="#" class="clients_logo"> <img src="{% static 'assets/img/home-one/clients_log5.png' %}" alt="" /> <img src="{% static 'assets/img/home-one/clients_log_black5.png' %}" alt="" /> </a>
+            </div>
+        </div>
+    </section>
+    <!-- cons clients logo area -->
+{% endblock %}

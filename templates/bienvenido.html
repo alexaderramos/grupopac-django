@@ -1,0 +1,39 @@
+
+{% extends 'layouts/app_2.html' %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Lista de clientes</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      {% for c in clientes %}
+                       <tr>
+                            <td scope="row">{{ c.id }}</td>
+                            <td>{{ c.name }}</td>
+                            <td>{{ c.email }}</td>
+                        </tr>
+                      {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

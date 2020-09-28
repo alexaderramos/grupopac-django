@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Quper Construction template" />
+        <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/x-icon" />
+        <title>Grupo Pac {% block page-title %}{% endblock %}</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static "assets/vendors/bootstrap/css/bootstrap.min.css" %}" />
+        <link rel="stylesheet" href="{% static 'assets/vendors/font-awesome/css/all.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/vendors/icomoon/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/vendors/slick/slick.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/vendors/slick/slick-theme.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/vendors/animation/animate.css' %}" />
+        {% block css %}
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'assets/vendors/mCustomScrollbar/jquery.mCustomScrollbar.min.css' %}" />
+        <!-- style CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}" />
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <div id="preloader"><div class="product_name">Grupo pac</div></div>
+
+           {% block header %}
+           {% endblock %}
+
+            {% block slider-area %}
+            {% endblock %}
+
+            {% block breadcrumb-area %}
+            {% endblock %}
+            <!--================= mobile menu =================-->
+            <div class="mobile_menu d-flex flex-wrap align-items-end">
+                <div class="close_btn">X</div>
+                <ul class="list-unstyled mb_menu wd_scroll">
+                    <li class="active"><a href="{% url 'welcome' %}">Inicio</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#"> Shops </a>
+                        <ul class="list-unstyled">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="product-details.html">Product Details</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="list-unstyled social_links">
+                    <li>
+                        <a href="#" title=""><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title=""><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title=""><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title=""><i class="fab fa-dribbble"></i></a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <p>Copyright © 2020 <a href="#" title="">TexTheme</a> All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="body_capture"></div>
+            <!--================= mobile menu =================-->
+            {% block content %}
+            {% endblock %}
+            <!-- cons footer_area -->
+            <footer class="footer_area">
+                <div class="footer_top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="f_widget f_about_widget wow fadeInUp" data-wow-delay="0.1s">
+                                    <a href="#" class="f_logo"> <img src="{% static 'assets/img/home-one/logo.png' %}" alt="" /> </a>
+                                    <p>At Quper we care about each client and each person who works with us and makes great projects possible</p>
+                                    <ul class="list-unstyled f_social">
+                                        <li>
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 offset-md-1 col-sm-5">
+                                <div class="f_widget f_link_widget wow fadeInUp" data-wow-delay="0.2s">
+                                    <h3 class="f_title">Who we are</h3>
+                                    <ul class="list-unstyled f_link">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Our Team</a></li>
+                                        <li><a href="#">Projects</a></li>
+                                        <li><a href="#">Services</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="f_widget f_contact_info_widget wow fadeInUp" data-wow-delay="0.3s">
+                                    <h3 class="f_title">Contact Us</h3>
+                                    <ul class="list-unstyled contact_info_link">
+                                        <li>Phone: <a href="tel:051958237851">+051 - 958 237 851</a></li>
+                                        <li>Email: <a href="mailto:support@quper.io">support@quper.io</a></li>
+                                        <li>Address: <span>200 Mille St. Suite 9070, Houston, TX 77002, Estados Unidos</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bottom border_top">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-sm-7">
+                                <p class="copy_text">© 2020 Quper Construction, designed by <a href="#">TexTheme</a></p>
+                            </div>
+                            <div class="col-sm-5 text-right">
+                                <a href="#" class="go_top">go back up <i class="fas fa-angle-up"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- cons_footer area -->
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- Popper.js first, then Bootstrap JS -->
+        <script src="{% static 'assets/js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'assets/vendors/bootstrap/js/popper.min.js' %}"></script>
+        <script src="{%  static 'assets/vendors/bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/vendors/slick/slick.min.js' %}"></script>
+        <script src="{% static 'assets/js/parallaxie.js' %}"></script>
+        <script src="{% static 'assets/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.parallax-scroll.js' %}"></script>
+        <script src="{%  static 'assets/vendors/wow/wow.min.js' %}"></script>
+        <script src="{% static 'assets/vendors/pace/pace.min.js' %}"></script>
+        {% block scripts %}
+        {% endblock %}
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    </body>
+    <!-- Mirrored from csvisual.com/quper/quper/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Sep 2020 19:45:48 GMT -->
+</html>

@@ -44,10 +44,12 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <form action="#" class="contact_form">
-                    <div class="form-group"><input type="text" class="form-control" placeholder="Name" /></div>
-                    <div class="form-group"><input type="email" class="form-control" placeholder="E.g., e.quper@gmail.com" /></div>
-                    <div class="form-group"><textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></div>
+                {% include 'alerts/messages.html' %}
+                <form action="{% url 'contact' %}" class="contact_form" method="post">
+                    {% csrf_token %}
+                    <div class="form-group"><input  required type="text" name="name" class="form-control" placeholder="Name" /></div>
+                    <div class="form-group"><input  required type="email" name="email" class="form-control" placeholder="E.g., e.quper@gmail.com" /></div>
+                    <div class="form-group"><textarea required  class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></div>
                     <div class="form-group"><button type="submit" class="theme_btn theme_btn_three hover_style1">Seend Message</button></div>
                 </form>
             </div>

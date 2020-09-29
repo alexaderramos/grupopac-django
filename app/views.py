@@ -21,8 +21,22 @@ def about(request):
 
 
 def contact(request):
+    status = ''
+    message = ''
+    if request.method == 'POST':
+        form = ClientForm(request.POST)
+        if form.is_valid():
+            form.save()
+            status = 'success'
+            message = 'Tu mensaje fue enviado correctamente'
+        else:
+            status = 'danger'
+            message = 'Ocurrio un error al enviar tu mensaje, intenta nuevamente'
+
     context = {
-        'contact_page': 'active'
+        'contact_page': 'active',
+        'status': status,
+        'message': message
     }
     return render(request, 'contact.html', context)
 

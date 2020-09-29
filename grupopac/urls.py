@@ -17,19 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import handler404
 
-from app.views import welcome, createClient, storeClient, about, contact, page_404
+from app.views import welcome, about, contact, page_404, create_client, store_client, index_client
 
 handler404 = page_404
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 
     path('', welcome, name="welcome"),
     path('nosotros/', about, name="about"),
     path('contactanos/', contact, name="contact"),
 
-    path('clientes/registrar/', createClient, name="clients.create"),
-    path('clientes/guardar/', storeClient, name="clients.store")
+    path('clientes/registrar/', create_client, name="clients.create"),
+    path('clientes/', index_client, name="clients.index"),
+    path('clientes/guardar/', store_client, name="clients.store")
 ]
 
 

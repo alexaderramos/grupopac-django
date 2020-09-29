@@ -31,20 +31,20 @@ def page_404(request, exception):
     return page_not_found(request, exception, template_name='errors/404.html')
 
 
-# def bienvenido(request):
-# return HttpResponse("Hello")
-#   clientes = Client.objects.all()
-#  lista = [1, 2, 3, 4, 5, 6, 7, 8]
-# context = {'nombre': "Alexander", 'edad': 23, 'lista': lista, 'clientes': clientes}
-# return render(request, "bienvenido.html", context)
+def index_client(request):
+    # return HttpResponse("Hello")
+    clientes = Client.objects.all()
+    lista = [1, 2, 3, 4, 5, 6, 7, 8]
+    context = {'nombre': "Alexander", 'edad': 23, 'lista': lista, 'clientes': clientes}
+    return render(request, "clients/index.html", context)
 
 
-def createClient(request):
+def create_client(request):
     form = ClientForm()
     return render(request, 'clients/create.html', {'form': form})
 
 
-def storeClient(request):
+def store_client(request):
     if request.method == 'POST':
         form = ClientForm(request.POST)
         if form.is_valid():

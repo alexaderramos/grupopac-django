@@ -5,6 +5,9 @@ from django.views.defaults import page_not_found
 from app.forms import ClientForm
 from app.models import Client
 
+# PAGINATION
+from django.core.paginator import Paginator
+
 
 def welcome(request):
     context = {
@@ -45,12 +48,22 @@ def page_404(request, exception):
     return page_not_found(request, exception, template_name='errors/404.html')
 
 
+"""
+    Clients
+"""
+
+
 def index_client(request):
     # return HttpResponse("Hello")
-    clientes = Client.objects.all()
-    lista = [1, 2, 3, 4, 5, 6, 7, 8]
-    context = {'nombre': "Alexander", 'edad': 23, 'lista': lista, 'clientes': clientes}
-    return render(request, "clients/index.html", context)
+    clients = Client.objects.all()
+    # lista = [1, 2, 3, 4, 5, 6, 7, 8]
+    # context = {'nombre': "Alexander", 'edad': 23, 'lista': lista, 'clientes': clientes}
+
+    pagination = Paginator(clients, 10)
+    page = request.GET.get('page')
+    clients = pagination.get_page(page)
+
+    return render(request, "clients/index.html", {'clients': clients})
 
 
 def create_client(request):

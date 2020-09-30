@@ -45,7 +45,10 @@ def contact(request):
 
 
 def portfolio(request):
-    return render(request, 'portfolio.html')
+    context = {
+        'portfolio_page': 'active'
+    }
+    return render(request, 'portfolio.html', context)
 
 
 def page_404(request, exception):

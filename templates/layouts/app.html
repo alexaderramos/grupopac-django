@@ -39,15 +39,14 @@
             <div class="mobile_menu d-flex flex-wrap align-items-end">
                 <div class="close_btn">X</div>
                 <ul class="list-unstyled mb_menu wd_scroll">
-                    <li class="active"><a href="{% url 'welcome' %}">Inicio</a></li>
-                    <li class="menu-item-has-children">
-                        <a href="#"> Shops </a>
-                        <ul class="list-unstyled">
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="product-details.html">Product Details</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+
+
+                    <li class="{{ welcome_page }}"><a  href="{% url 'welcome' %}">Inicio </a></li>
+                    <li class="{{ about_page }}"><a  href="{% url 'about' %}">Nosotros</a></li>
+                    <li class="{{ portfolio_page }}"><a  href="{% url 'portfolio' %}">Portafolio</a></li>
+                    <li class="{{ contact_page }}"><a  href="{% url 'contact' %}">Contactanos</a></li>
+
+
                 </ul>
                 <ul class="list-unstyled social_links">
                     <li>

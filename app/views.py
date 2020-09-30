@@ -44,6 +44,10 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 
+def portfolio(request):
+    return render(request, 'portfolio.html')
+
+
 def page_404(request, exception):
     return page_not_found(request, exception, template_name='errors/404.html')
 

@@ -1,0 +1,176 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block page-title %}| Portafolio{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'assets/vendors/odometer/odometer.css' %}" />
+{% endblock %}
+
+
+{% block header %}
+{% include 'layouts/partials/menus/menu-default.html' %}
+{% endblock %}
+
+{% block breadcrumb-area %}
+<section class="breadcrumb_area">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="left"><h4>Nostros</h4></div>
+            <div class="right">
+                <ul class="nav">
+                    <li><a href="{% url 'welcome' %}">Inicio</a></li>
+                    <li><a href="{% url 'portfolio' %}">Portafolio</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+    <section class="projects_area pt_200">
+                <div class="container">
+                    <div id="portfolio_filter" class="portfolio_filter">
+                        <div data-filter="*" class="portfolio_filter_item active">All Porjects</div>
+                        <div data-filter=".cons" class="portfolio_filter_item">Construction</div>
+                        <div data-filter=".arch" class="portfolio_filter_item">Architecture</div>
+                        <div data-filter=".plan" class="portfolio_filter_item">Planing</div>
+                        <div data-filter=".install" class="portfolio_filter_item">Install</div>
+                        <div data-filter=".repair" class="portfolio_filter_item">Repair</div>
+                    </div>
+                    <div class="row projects_inner">
+                        <div class="col-md-6 cons repair">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-1.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Building</h6>
+                                    <h4>
+                                        Modern building for the fi-<br />
+                                        nancial sector
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 install plan">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-2.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Repair</h6>
+                                    <h4>
+                                        Construction of the largest <br />
+                                        shopping center
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 arch">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-3.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Planing</h6>
+                                    <h4>
+                                        Project planning for financial <br />
+                                        center
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 repair">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-4.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Building</h6>
+                                    <h4>
+                                        Highest modern sky<br />
+                                        scraper
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 install plan">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-5.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Building</h6>
+                                    <h4>
+                                        Construction project <br />
+                                        building
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 arch cons">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-6.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Repair</h6>
+                                    <h4>
+                                        Repair and modification of<br />
+                                        family property
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 repair">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-7.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Construction</h6>
+                                    <h4>
+                                        Construction of family <br />
+                                        home
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 install">
+                            <div class="pr_slider_item project_item">
+                                <img src="{% static 'assets/img/projects/project-8.jpg' %}" alt="" />
+                                <div class="hover-content">
+                                    <h6>Install</h6>
+                                    <h4>
+                                        Complete solar panel <br />
+                                        installations
+                                    </h4>
+                                    <a href="#" class="theme_btn_two hover_style1" data-text="See project" tabindex="0">View projetcs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination_area">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                <li class="page-item"><a class="page-link" href="#">18</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'assets/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{%  static 'assets/vendors/isotope/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/image-hover/three.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/image-hover/TweenMax.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/image-hover/hover.js' %}"></script>
+    <script src="{% static 'assets/vendors/odometer/viewport.jquery.js' %}"></script>
+    <script src="{% static 'assets/vendors/odometer/odometer.min.js' %}"></script>
+
+{% endblock %}

@@ -22,9 +22,6 @@ from app.views import welcome, about, contact, page_404, portfolio
 
 # from django.contrib.auth import login
 
-from django.conf import settings
-from django.conf.urls.static import static
-
 handler404 = page_404
 
 urlpatterns = [
@@ -40,4 +37,4 @@ urlpatterns = [
     path('panel/login/', LoginView.as_view(template_name='auth/login.html'), name="login"),
     path('panel/logout/', logout_then_login, name="logout")
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT )
+]

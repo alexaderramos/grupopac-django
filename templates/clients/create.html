@@ -11,7 +11,7 @@
                     <div class="card-body">
                     {# Display django.contrib.messages as Bootstrap alerts #}
                     {% bootstrap_messages %}
-                        <form action="{% url 'clients.store' %}" method="post" class="form">
+                        <form action="{% url 'app:clients.store' %}" method="post" class="form">
                             {% csrf_token %}
                          {% bootstrap_form form %}
                           {% buttons %}

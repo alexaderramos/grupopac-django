@@ -40,4 +40,4 @@ urlpatterns = [
     path('panel/login/', LoginView.as_view(template_name='auth/login.html'), name="login"),
     path('panel/logout/', logout_then_login, name="logout")
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT )

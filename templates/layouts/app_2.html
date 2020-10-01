@@ -17,27 +17,31 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    {% if user.is_authenticated %}
+
+
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+        <li class="nav-item active">
         <a class="nav-link" href="{% url 'app:clients.index' %}">Clientes</a>
-      </li>
-      <li class="nav-item">
+        </li>
+        <!--li class="nav-item">
         <a class="nav-link" href="{% url 'app:clients.create' %}">Registrar</a>
-      </li>
+        </li-->
     </ul>
 
-      <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav">
         <li class="dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                Bienvenido, {{ user.username | upper }} <b class="caret"></b>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesion</a>
-                <!--div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a-->
-            </div>
+        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+        Bienvenido, {{ user.username | upper }} <b class="caret"></b>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesion</a>
+        <!--div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a-->
+        </div>
         </li>
     </ul>
+    {% endif %}
   </div>
 </nav>
 <div class="container pt-4">

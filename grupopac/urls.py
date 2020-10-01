@@ -25,7 +25,7 @@ from app.views import welcome, about, contact, page_404, portfolio
 handler404 = page_404
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 
     path('', welcome, name="welcome"),
     path('nosotros/', about, name="about"),
